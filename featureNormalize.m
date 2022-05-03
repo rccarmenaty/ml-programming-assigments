@@ -26,9 +26,17 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
-
-
-
+for i = 1:size(X,2)
+  
+    vector = X(:,i);
+    mu(i) = mean(vector);
+    sigma(i) = std(vector);
+    
+    X(:,i) = (vector - mu(i)) ./ sigma(i);
+    
+endfor  
+  
+  
 
 
 

@@ -19,7 +19,18 @@ for iter = 1:num_iters
 
 
 
-
+%number of features
+    [n, c] = size(theta);
+    
+      
+      derivative = (X * theta) - y; % * X(i,j)
+      for j = 1:n
+          X(:,j);
+          vectorj = X(:,j);
+          product = vectorj .* derivative;
+          theta(j) = theta(j) - (alpha / m) * sum(product);   
+      endfor
+    
 
 
 
