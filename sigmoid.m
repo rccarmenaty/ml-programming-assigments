@@ -10,8 +10,9 @@ g = zeros(size(z));
 %               vector or scalar).
 
 
+exponent = 1 ./ exp(z);
 
-
+g = 1 ./ ( 1 + exponent );
 
 % =============================================================
 

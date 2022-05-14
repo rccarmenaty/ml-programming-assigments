@@ -17,11 +17,21 @@ p = zeros(m, 1);
 
 
 
+outputs = sigmoid(X * theta);
 
-
+p = arrayfun(@check, outputs);
 
 
 % =========================================================================
 
 
 end
+
+function out = check(n)
+  
+  if(n >= 0.5)
+    out = 1;
+  else
+    out = 0;
+  endif
+end  
